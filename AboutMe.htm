@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fremki | About Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Fremki</h1>
+    <p>My portfolio</p>
+</header>
+
+<section>
+
+    <div class="card">
+        <h2>👤 About me</h2>
+        <p>Hello! My name is Kirill. I am 19 years old and I am a student at Magistri Cumacini.</p>
+    </div>
+
+    <div class="card">
+        <h2>🎮 Steam Accounts</h2>
+
+        <a href="https://steamcommunity.com/profiles/76561199099008625/" target="_blank">
+            <button>Steam Account #1</button>
+        </a>
+
+        <a href="https://steamcommunity.com/profiles/76561198983624128/" target="_blank">
+            <button>Steam Account #2</button>
+        </a>
+
+    </div>
+
+    <div class="card">
+        <h2>💻 Projects</h2>
+        <p>Currently creating a Rust server with custom mods.</p>
+    </div>
+
+    <div class="card">
+        <h2>📞 Contacts</h2>
+
+        <p onclick="copyText('bo1tiara')" class="copy-text" id="discordText">
+        Click to copy my Discord: bo1tiara
+        </p>
+
+        <span id="copiedMsg" class="copied-msg">Copied!</span>
+    </div>
+
+</section>
+<script>
+function copyText(text) {
+    navigator.clipboard.writeText(text);
+
+    const msg = document.getElementById("copiedMsg");
+    msg.style.opacity = "1";
+
+    setTimeout(() => {
+        msg.style.opacity = "0";
+    }, 1500);
+}
+</script>
+</body>
+</html>
